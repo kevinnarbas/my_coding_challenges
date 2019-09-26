@@ -13,7 +13,7 @@ Hi my name is Kevinn Arbas (if you haven't already noticed..Hi via my github!) a
 ### Convert Celcius to Fahrenheit
 The formula for converting Celcius to Fahrenheit is `Celsius times 9/5, plus 32` so I did exactly that in the function 
 
-```
+```js
 function convertToF(celsius) {
   let fahrenheit;
   fahrenheit = (celsius*(9 / 5)) + 32
@@ -27,7 +27,7 @@ Here were using a function declaration calling it convertToF and passing it a ce
 ### Reverse a String 
 Constraints - result must be a string.
 
-```
+```js
 function reverseString(str) {
   let newArr = str.split('')
   str = newArr.reverse().join('')
@@ -35,3 +35,6 @@ function reverseString(str) {
 }
 ```
 Here we pass a string to the function reverseString to reverse the string passed in.  To do that I first initialized newArr because i wanted to turn the string to an array and to that I called the .split('') method to the string to *split* up the string by each space and return an array (e.g, 'Hey' turns into ['H', 'e', 'y']). Once I had that then I reassigned the str variable to the new array with a reverse array method that reverses the array and chained on another array method that joins everything in the array with a specified empty string so there wouldn't be anything between the array elements.
+
+
+*A lot more to come...*
