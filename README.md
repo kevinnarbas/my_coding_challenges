@@ -25,7 +25,8 @@ Here were using a function declaration calling it convertToF and passing it a ce
 ---
 
 ### Reverse a String 
-Constraints - result must be a string.
+Constraints 
+- result must be a string.
 
 ```js
 function reverseString(str) {
@@ -35,6 +36,61 @@ function reverseString(str) {
 }
 ```
 Here we pass a string to the function reverseString to reverse the string passed in.  To do that I first initialized newArr because i wanted to turn the string to an array and to that I called the .split('') method to the string to *split* up the string by each space and return an array (e.g, 'Hey' turns into ['H', 'e', 'y']). Once I had that then I reassigned the str variable to the new array with a reverse array method that reverses the array and chained on another array method that joins everything in the array with a specified empty string so there wouldn't be anything between the array elements.
+
+---
+
+### Return the factoral of provided interger 
+Constraints
+- Only intergers greater than or equal to zero will be supplied to function
+- factoralize(0) = 1 
+
+```js
+function factorialize(num) {
+  let prevNum = 1
+  if (num > 0) {
+    for (let i = 1; i <= num; i++) {
+      prevNum *= i
+    }
+    num = prevNum
+  } else if (num === 0) {
+    num = 1
+  }
+  return num;
+}
+```
+
+
+
+---
+
+### Find the longest word in a string
+
+constraints 
+- Response should be a number
+
+```js
+function findLongestWordLength(str) {
+  let newArr = str.split(' ')
+  str = newArr.sort((a, b) => a.length - b.length).pop()
+  return str.length;
+}
+```
+
+---
+
+## Hackerrank 30 Days of Code!
+
+Day 1 - To complete this challenge, you must save a line of input from stdin to a variable, print Hello, World. on a single line, and finally print the value of your variable on a second line.
+
+```js
+function processData(inputString) {
+    // This line of code prints the first line of output
+    console.log("Hello, World.");
+  
+    // Write the second line of output that prints the contents of 'inputString' here.
+    console.log('Welcome to 30 Days of Code!')
+}
+```
 
 
 *A lot more to come...*
