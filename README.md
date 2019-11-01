@@ -103,27 +103,6 @@ Day 1 - Complete the code in the editor below. The variables i, d, and s are alr
     3. Concatenate  with the string you read as input and print the result on a new line.
 
 ```js
-process.stdin.resume();
-process.stdin.setEncoding('ascii');
-
-var input_stdin = "";
-var input_stdin_array = "";
-var input_currentline = 0;
-
-process.stdin.on('data', function (data) {
-    input_stdin += data;
-});
-
-process.stdin.on('end', function () {
-    input_stdin_array = input_stdin.split("\n");
-    main();    
-});
-
-// Reads complete line from STDIN
-function readLine() {
-    return input_stdin_array[input_currentline++];
-}
-
 function main() {
     var i = 4
     var d = 4.0
@@ -141,6 +120,20 @@ function main() {
     console.log(i + parseInt(input_stdin_array[0]))
     console.log(Math.abs(((d + parseFloat(input_stdin_array[1])) * 10) / 10).toFixed(1))
     console.log(s + input_stdin_array[2])
+}
+```
+
+Day 2 - Given the meal price (base cost of a meal), tip percent (the percentage of the meal price being added as tip), and tax percent (the percentage of the meal price being added as tax) for a meal, find and print the meal's total cost.
+
+```js
+// Complete the solve function below.
+function solve(meal_cost, tip_percent, tax_percent) {
+    let a = meal_cost
+    let b = meal_cost * (tip_percent/100)
+    let c = meal_cost * (tax_percent/100)
+    let d = a + b + c
+    let rounded = Math.round(d)
+    console.log(rounded)
 }
 ```
 
