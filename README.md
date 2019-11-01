@@ -128,13 +128,11 @@ Day 2 - Given the meal price (base cost of a meal), tip percent (the percentage 
 ```js
 // Complete the solve function below.
 function solve(meal_cost, tip_percent, tax_percent) {
-    let a = meal_cost
-    let b = meal_cost * (tip_percent/100)
-    let c = meal_cost * (tax_percent/100)
-    let d = a + b + c
-    let rounded = Math.round(d)
+    let total = meal_cost + 
+        (meal_cost * (tip_percent/100)) + 
+        (meal_cost * (tax_percent/100))
+    let rounded = Math.round(total)
     console.log(rounded)
-}
 ```
 
 *A lot more to come...*
